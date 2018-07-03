@@ -700,7 +700,8 @@ class Wsdl
 
             case 'void':
                 return '';
-
+            case 'base64Binary':
+                return self::XSD_NS . 'base64Binary';
             default:
                 // delegate retrieval of complex type to current strategy
                 return $this->addComplexType($type);
